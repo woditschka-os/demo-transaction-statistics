@@ -20,7 +20,7 @@ The application is designed following the principles of [DDD](https://en.wikiped
 ## Implementation
 
 To allow performat storage, cleanup and retrieval transactions are stored in a threadsafe time based min-heap which allows 
-to insert new transactions with O(log n) to efficiently cleanup expired transactions and calculate statistics with O(n)
+to insert new transactions with O(log n), to efficiently cleanup expired transactions and calculate statistics with O(n)
 
 To allow statistics query with O(1) and keep the transaction stream clean these operations are executed periodic with
 the result cached for retrieval with O(1). 

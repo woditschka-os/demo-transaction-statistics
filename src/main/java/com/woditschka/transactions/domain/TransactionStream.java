@@ -7,8 +7,7 @@ import static java.util.Comparator.comparingLong;
 import static java.util.stream.Collectors.summarizingDouble;
 
 /**
- * Transaction stream processor capable of managing a configurable sliding time window.
- * The stream is stored within a threadsafe min-heap.
+ * Transaction stream processor manages a configurable sliding time window with a threadsafe time based min-heap.
  * <p>
  * The min-heao allows to add transactions with a time complexity of O(log n), staistics calculation and cleanup
  * of expired transactions with a time complexity of O(n).
@@ -25,7 +24,7 @@ public class TransactionStream {
   /**
    * Post a transaction to the stream - time complexity O(log n)
    *
-   * @param now         cureent timestamp (epoch)
+   * @param now         current timestamp (epoch)
    * @param transaction transaction to store
    * @return true when accepted
    */
@@ -40,7 +39,7 @@ public class TransactionStream {
   /**
    * Build statistics and remove expired transactions - time complexity O(n).
    *
-   * @param now cureent timestamp (epoch)
+   * @param now current timestamp (epoch)
    * @return transaction statistics within the sliding time window
    */
   public TransactionStatistics buildStatisticsAndCleanup(long now) {
