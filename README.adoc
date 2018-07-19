@@ -1,4 +1,0 @@
-# Transaction Statistics
-
-
-[![Build Status](https://travis-ci.org/woditschka-os/demo-transaction-statistics.svg?branch=master)](https://travis-ci.org/woditschka-os/demo-transaction-statistics)
